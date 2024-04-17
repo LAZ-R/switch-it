@@ -92,15 +92,17 @@ const getLengthValuesByInput = (input) => {
 //console.table(getLengthValuesByInput({ valeur: 1.81, unite: LONGUEUR.nautique }));
 
 const onLongueurInput = (value, id) => {
-  const data = getLengthValuesByInput({ valeur: Number(value), unite: id });
-
-  document.getElementById(LONGUEUR.centimetre).value = data.centimetre;
-  document.getElementById(LONGUEUR.metre).value = data.metre;
-  document.getElementById(LONGUEUR.kilometre).value = data.kilometre;
-  document.getElementById(LONGUEUR.inch).value = data.inch;
-  document.getElementById(LONGUEUR.feet).value = data.feet;
-  document.getElementById(LONGUEUR.mile).value = data.mile;
-  document.getElementById(LONGUEUR.nautique).value = data.nautique;
+  if (value != '') {
+    const data = getLengthValuesByInput({ valeur: Number(value), unite: id });
+  
+    document.getElementById(LONGUEUR.centimetre).value = data.centimetre;
+    document.getElementById(LONGUEUR.metre).value = data.metre;
+    document.getElementById(LONGUEUR.kilometre).value = data.kilometre;
+    document.getElementById(LONGUEUR.inch).value = data.inch;
+    document.getElementById(LONGUEUR.feet).value = data.feet;
+    document.getElementById(LONGUEUR.mile).value = data.mile;
+    document.getElementById(LONGUEUR.nautique).value = data.nautique;
+  }
 }
 window.onLongueurInput = onLongueurInput;
 
@@ -176,13 +178,15 @@ const getMassValuesByInput = (input) => {
 //console.table(getMassValuesByInput({ valeur: 100, unite: MASSE.pound }));
 
 const onMasseInput = (value, id) => {
-  const data = getMassValuesByInput({ valeur: Number(value), unite: id });
+  if (value != '') {
+    const data = getMassValuesByInput({ valeur: Number(value), unite: id });
 
-  document.getElementById(MASSE.gramme).value = data.gramme;
-  document.getElementById(MASSE.kilogramme).value = data.kilogramme;
-  document.getElementById(MASSE.tonne).value = data.tonne;
-  document.getElementById(MASSE.ounce).value = data.ounce;
-  document.getElementById(MASSE.pound).value = data.pound;
+    document.getElementById(MASSE.gramme).value = data.gramme;
+    document.getElementById(MASSE.kilogramme).value = data.kilogramme;
+    document.getElementById(MASSE.tonne).value = data.tonne;
+    document.getElementById(MASSE.ounce).value = data.ounce;
+    document.getElementById(MASSE.pound).value = data.pound;
+  }
 }
 window.onMasseInput = onMasseInput;
 
@@ -258,13 +262,15 @@ const getSpeedValuesByInput = (input) => {
 //console.table(getSpeedValuesByInput({ valeur: 1, unite: VITESSE.celerite }));
 
 const onVitesseInput = (value, id) => {
-  const data = getSpeedValuesByInput({ valeur: Number(value), unite: id });
+  if (value != '') {
+    const data = getSpeedValuesByInput({ valeur: Number(value), unite: id });
 
-  document.getElementById(VITESSE.metreParSeconde).value = data.metreParSeconde;
-  document.getElementById(VITESSE.kilometreParHeure).value = data.kilometreParHeure;
-  document.getElementById(VITESSE.mileParHeure).value = data.mileParHeure;
-  document.getElementById(VITESSE.noeud).value = data.noeud;
-  document.getElementById(VITESSE.celerite).value = data.celerite;
+    document.getElementById(VITESSE.metreParSeconde).value = data.metreParSeconde;
+    document.getElementById(VITESSE.kilometreParHeure).value = data.kilometreParHeure;
+    document.getElementById(VITESSE.mileParHeure).value = data.mileParHeure;
+    document.getElementById(VITESSE.noeud).value = data.noeud;
+    document.getElementById(VITESSE.celerite).value = data.celerite;
+  }
 }
 window.onVitesseInput = onVitesseInput;
 
@@ -313,11 +319,13 @@ const getTemperatureValuesByInput = (input) => {
 //console.table(getTemperatureValuesByInput({ valeur: 50, unite: TEMPERATURE.fahrenheit }));
 
 const onTemperatureInput = (value, id) => {
-  const data = getTemperatureValuesByInput({ valeur: Number(value), unite: id });
+  if (value != '') {
+    const data = getTemperatureValuesByInput({ valeur: Number(value), unite: id });
 
-  document.getElementById(TEMPERATURE.kelvin).value = data.kelvin;
-  document.getElementById(TEMPERATURE.celcius).value = data.celcius;
-  document.getElementById(TEMPERATURE.fahrenheit).value = data.fahrenheit;
+    document.getElementById(TEMPERATURE.kelvin).value = data.kelvin;
+    document.getElementById(TEMPERATURE.celcius).value = data.celcius;
+    document.getElementById(TEMPERATURE.fahrenheit).value = data.fahrenheit;
+  }
 }
 window.onTemperatureInput = onTemperatureInput;
 
@@ -425,16 +433,18 @@ const getSurfaceValuesByInput = (input) => {
 //console.table(getSurfaceValuesByInput({ valeur: 100, unite: SUPERFICIE.squareMile }));
 
 const onSuperficieInput = (value, id) => {
-  const data = getSurfaceValuesByInput({ valeur: Number(value), unite: id });
+  if (value != '') {
+    const data = getSurfaceValuesByInput({ valeur: Number(value), unite: id });
 
-  document.getElementById(SUPERFICIE.centimetre2).value = data.centimetre2;
-  document.getElementById(SUPERFICIE.squareInch).value = data.squareInch;
-  document.getElementById(SUPERFICIE.squareFeet).value = data.squareFeet;
-  document.getElementById(SUPERFICIE.metre2).value = data.metre2;
-  document.getElementById(SUPERFICIE.are).value = data.are;
-  document.getElementById(SUPERFICIE.hectar).value = data.hectar;
-  document.getElementById(SUPERFICIE.kilometre2).value = data.kilometre2;
-  document.getElementById(SUPERFICIE.squareMile).value = data.squareMile;
+    document.getElementById(SUPERFICIE.centimetre2).value = data.centimetre2;
+    document.getElementById(SUPERFICIE.squareInch).value = data.squareInch;
+    document.getElementById(SUPERFICIE.squareFeet).value = data.squareFeet;
+    document.getElementById(SUPERFICIE.metre2).value = data.metre2;
+    document.getElementById(SUPERFICIE.are).value = data.are;
+    document.getElementById(SUPERFICIE.hectar).value = data.hectar;
+    document.getElementById(SUPERFICIE.kilometre2).value = data.kilometre2;
+    document.getElementById(SUPERFICIE.squareMile).value = data.squareMile;
+  }
 }
 window.onSuperficieInput = onSuperficieInput;
 
@@ -498,12 +508,14 @@ const getVolumeValuesByInput = (input) => {
 //console.table(getVolumeValuesByInput({ valeur: 1, unite: VOLUME.gallonUs }));
 
 const onVolumeInput = (value, id) => {
-  const data = getVolumeValuesByInput({ valeur: Number(value), unite: id });
+  if (value != '') {
+    const data = getVolumeValuesByInput({ valeur: Number(value), unite: id });
 
-  document.getElementById(VOLUME.centimetre3).value = data.centimetre3;
-  document.getElementById(VOLUME.metre3).value = data.metre3;
-  document.getElementById(VOLUME.litre).value = data.litre;
-  document.getElementById(VOLUME.gallonUs).value = data.gallonUs;
+    document.getElementById(VOLUME.centimetre3).value = data.centimetre3;
+    document.getElementById(VOLUME.metre3).value = data.metre3;
+    document.getElementById(VOLUME.litre).value = data.litre;
+    document.getElementById(VOLUME.gallonUs).value = data.gallonUs;
+  }
 }
 window.onVolumeInput = onVolumeInput;
 
