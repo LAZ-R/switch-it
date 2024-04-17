@@ -553,7 +553,7 @@ const onMesureHeaderClick = (id, childNumber) => {
 window.onMesureHeaderClick = onMesureHeaderClick;
 
 document.getElementById('main').innerHTML = `
-  <h1><img src="medias/app-maskable-icons/app_icon_144.png" />Convertisseur</h1>
+  <h1><img src="medias/app-maskable-icons/app_icon_144.png" />Switch it !</h1>
   <div id="longueurs" class="mesure-box closed longueurs">
     <div class="mesure-title" onclick="onMesureHeaderClick('longueurs', 7)">
       <img class="mesure-icon" src="medias/images/icons/ruler-horizontal-solid.svg" />
